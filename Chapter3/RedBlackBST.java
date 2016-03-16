@@ -229,7 +229,7 @@ public class RedBlackBST<Key extends Comparable<Key>, Value>
     {
         flipColors(h);
         //判断当前结点的左子结点是否是2-结点
-        if (!isRed(h.left.left))
+        if (isRed(h.left.left))
         {
             h = rotateRight(h);
             flipColors(h);
